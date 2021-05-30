@@ -12,7 +12,6 @@ module.exports = function (playerAction) {
   } else {
     computerAction = 'paper'
   }
-
   if (computerAction == playerAction) {
     return 0;
   } else if (

@@ -22,7 +22,7 @@ http.createServer(function (request, response) {
 ```
 推荐一个好用的 npm 模块：`http-server`。
 
-### Express
+### HTTP 服务框架：Express
 要了解一个框架，最好的方法是
 - 了解它的关键功能
 - 推导出它要解决的问题是什么
@@ -37,3 +37,7 @@ http.createServer(function (request, response) {
   - 异步会打破 Express 的洋葱模型
 
 这些核心功能都是为了让我们更加方便、简洁地写出 HTTP 服务，大大减轻我们的开发负担；让我们快速上手开发。
+但是 `express` 的 `next()` 对异步不太友好，只适合执行同步代码。
+
+### HTTP 服务框架：koa
+`koa` 就是为了解决 `express` 的一些设计缺陷而诞生的。
