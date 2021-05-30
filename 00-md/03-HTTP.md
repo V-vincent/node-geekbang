@@ -21,3 +21,19 @@ http.createServer(function (request, response) {
 }).listen(3000)
 ```
 推荐一个好用的 npm 模块：`http-server`。
+
+### Express
+要了解一个框架，最好的方法是
+- 了解它的关键功能
+- 推导出它要解决的问题是什么
+官网地址：`https://www.npmjs.com/package/express`
+核心功能：`Features`
+- 路由
+- `request`/`response` 简化
+  - `request`: `pathname`、`query` 等
+  - `response`: `send()`、`json()`、`jsonp()` 等
+- 中间件
+  - 更好地组织流程代码
+  - 异步会打破 Express 的洋葱模型
+
+这些核心功能都是为了让我们更加方便、简洁地写出 HTTP 服务，大大减轻我们的开发负担；让我们快速上手开发。
