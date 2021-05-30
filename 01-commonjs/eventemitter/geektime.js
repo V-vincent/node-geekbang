@@ -1,5 +1,7 @@
+// 观察者模式：EventEmitter
 const EventEmitter = require('events').EventEmitter;
 
+// 一个简单的事件收发器
 class Geektime extends EventEmitter {
   constructor() {
     super();
