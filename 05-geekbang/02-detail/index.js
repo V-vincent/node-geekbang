@@ -16,18 +16,23 @@ app.use(async (ctx) => {
   }
 
   const result = await new Promise((resolve, reject) => {
+
     rpcClient.write({
       columnid: ctx.query.columnid
     }, function (err, data) {
       err ? reject(err) : resolve(data)
     })
   })
-  console.log('result', result)
-  ctx.status = 200;
 
+  ctx.status = 200;
   ctx.body = detailTemplate(result);
 })
 
-// app.listen(3000);
-
 module.exports = app;
+
+// 详情页单独打开服务：
+// （多了的文件夹：__server、detail-service）
+// 分屏启动服务器：node __server/index.js
+// 本地启动：node index.js
+// 浏览器打开：http://localhost:3000/?columnid=1
+// app.listen(3000)
